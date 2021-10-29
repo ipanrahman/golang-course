@@ -3,6 +3,8 @@ package unittest
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestHelloWorld(t *testing.T) {
@@ -19,4 +21,9 @@ func TestHelloAhmad(t *testing.T) {
 		t.Fatal("Result must be 'Hello, Bukan Ahmad'")
 	}
 	fmt.Println("Testing TestHelloAhmad done.")
+}
+
+func TestHelloWorldAssert(t *testing.T) {
+	result := HelloWorld("ipan")
+	assert.Equal(t, "Hello, ipan", result, "Result must be 'Hello, ipan'")
 }
