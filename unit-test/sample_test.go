@@ -8,7 +8,7 @@ import (
 func TestHelloWorld(t *testing.T) {
 	result := HelloWorld("Ipan")
 	if result != "Hello, Ipan" {
-		t.Fail()
+		t.Error("Result must be Hello, Ipan")
 	}
 	fmt.Println("Testing TestHelloWorld done.")
 }
@@ -16,7 +16,7 @@ func TestHelloWorld(t *testing.T) {
 func TestHelloAhmad(t *testing.T) {
 	result := HelloWorld("Bukan Ahmad")
 	if result != "Hello, Ahmad" {
-		t.FailNow()
+		t.Fatal("Result must be 'Hello, Bukan Ahmad'")
 	}
 	fmt.Println("Testing TestHelloAhmad done.")
 }
